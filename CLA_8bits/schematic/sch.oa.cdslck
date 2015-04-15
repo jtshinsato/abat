@@ -12,5 +12,5 @@ ProcessCreationTime_Readable   Wed Apr 15 16:49:09 2015 EDT
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /nethome/jshinsato3/ECE6130_Cadence/Cadence/ECE8893_lib/CLA_4bits/schematic/sch.oa.cdslck
-TimeEditLocked                 Wed Apr 15 16:54:37 2015 EDT
+FilePathUsedToEditLock         /nethome/jshinsato3/ECE6130_Cadence/Cadence/ECE8893_lib/CLA_8bits/schematic/sch.oa.cdslck
+TimeEditLocked                 Wed Apr 15 16:57:14 2015 EDT
