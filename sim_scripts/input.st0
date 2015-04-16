@@ -1,0 +1,69 @@
+***** HSPICE -- B-2008.09 32-BIT (Aug 26 2008) linux ******
+ Input File: input.ckt
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   jshinsato3           HOSTNAME: ccblincad13.ece.gatech.edu
+ lic: HOSTID: 001d092cd877         PID:      23343
+ lic: Using FLEXlm license file:
+ lic: 1900@ecelinsrv3.ece.gatech.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 12-jan-2016/2014.09
+ lic: FLOATING license(s) on SERVER ecelinsrv3.ece.gatech.edu
+ lic:
+ Init: hspice initialization file: /tools/linsoft2/synopsys/hspice/hspice/hspice
+ init: begin read circuit files,  cpu clock=  0.00E+00
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/ad
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/beh
+                         ave
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/bjt
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/bur
+                         r_brn
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/com
+                         linear
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/dio
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/fet
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/lin
+                         _tech
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/pci
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/sig
+                         net
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/ti
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/tli
+                         ne
+       option search   = /tools/linsoft2/synopsys/hspice/hspice/parts/xil
+                         inx
+       option runlvl
+       option artist   =     2.00
+       option ingold   =     2.00
+       option parhie   = local
+       option psf      =     2.00
+ init: end read circuit files,  cpu clock=  1.00E-02 memory=    162 kb
+ init: begin check errors,  cpu clock=  1.00E-02
+ lic: Using FLEXlm license file:
+ lic: 1900@ecelinsrv3.ece.gatech.edu
+ lic: Checkout 1 cdsaawaves
+ lic: License/Maintenance for cdsaawaves will expire on 12-jan-2016/2014.09
+ lic: FLOATING license(s) on SERVER ecelinsrv3.ece.gatech.edu
+ lic:
+ init: end check errors,  cpu clock=  3.36E-01 memory=   2105 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  3.36E-01
+       establish matrix -- done,  cpu clock=  3.39E-01 memory=   2163 kb
+       re-order matrix -- done,  cpu clock=  3.65E-01 memory=   2163 kb
+ init: end setup matrix,  cpu clock=  3.65E-01 memory=   2728 kb
+ dcop: begin dcop,  cpu clock=  3.66E-01
+ dcop: end dcop,  cpu clock=  8.47E-01 memory=   2728 kb  tot_iter=      94
+ sweep: tran tran0    begin, stop_t=  2.00E-05 #sweeps=2001 cpu clock=  8.67E-01
+ tran: time= 2.0022E-06 tot_iter=   11877 conv_iter=    3256 cpu clock= 1.52E+01
+ tran: time= 4.0012E-06 tot_iter=   23889 conv_iter=    6553 cpu clock= 2.92E+01
+ tran: time= 6.0006E-06 tot_iter=   36104 conv_iter=    9904 cpu clock= 4.34E+01
+ tran: time= 8.0029E-06 tot_iter=   48112 conv_iter=   13191 cpu clock= 5.72E+01
+ tran: time= 1.0005E-05 tot_iter=   60113 conv_iter=   16474 cpu clock= 7.08E+01
+ tran: time= 1.2001E-05 tot_iter=   71950 conv_iter=   19725 cpu clock= 8.46E+01
+ tran: time= 1.4001E-05 tot_iter=   84043 conv_iter=   23041 cpu clock= 9.85E+01
+ tran: time= 1.6002E-05 tot_iter=   96080 conv_iter=   26346 cpu clock= 1.12E+02
+ tran: time= 1.8002E-05 tot_iter=  108402 conv_iter=   29728 cpu clock= 1.27E+02
+ sweep: tran tran0    end,  cpu clock=  1.41E+02 memory=   2780 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: /tools/linsoft2/synopsys/hspice/hspice/hspice
+ lic: Release cdsaawaves token(s)
+ lic: Release hspice token(s)

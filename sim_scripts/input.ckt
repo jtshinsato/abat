@@ -1,0 +1,194 @@
+** Generated for: hspiceD
+** Generated on: Apr 15 17:42:36 2015
+** Design library name: ECE8893_lib
+** Design cell name: CLA_8bits
+** Design view name: schematic
+.PARAM Vcc=1 Vss=0
+*.OPTION DELMAX=1e-6
+.OP
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_THKOX.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTL.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_THKOX.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTL.inc"
+
+** Library name: ECE8893_lib
+** Cell name: inv1
+** View name: schematic
+.subckt inv1 a out vground vsupply
+m1 out a vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m3 out a vground vground NMOS_VTH L=45e-9 W=90e-9
+.ends inv1
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: xor2
+** View name: schematic
+.subckt xor2 a b out vground vsupply
+m4 out net24 net41 vsupply PMOS_VTH L=45e-9 W=360e-9
+m3 net41 b vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m1 out a net40 vsupply PMOS_VTH L=45e-9 W=360e-9
+m0 net40 net16 vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m7 net39 a vground vground NMOS_VTH L=45e-9 W=90e-9
+m6 net38 net24 vground vground NMOS_VTH L=45e-9 W=90e-9
+m5 out net16 net38 vground NMOS_VTH L=45e-9 W=90e-9
+m2 out b net39 vground NMOS_VTH L=45e-9 W=90e-9
+xi7 b net16 vground vsupply inv1
+xi6 a net24 vground vsupply inv1
+.ends xor2
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: nand2
+** View name: schematic
+.subckt nand2 a b out vground vsupply
+m1 out a vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m0 out b vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m3 net22 b vground vground NMOS_VTH L=45e-9 W=157.5e-9
+m2 out a net22 vground NMOS_VTH L=45e-9 W=157.5e-9
+.ends nand2
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: and2
+** View name: schematic
+.subckt and2 a b out vground vsupply
+xi0 a b net13 vground vsupply nand2
+xi6 net13 out vground vsupply inv1
+.ends and2
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: nor2
+** View name: schematic
+.subckt nor2 a b out vground vsupply
+m1 net13 a vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m0 out b net13 net13 PMOS_VTH L=45e-9 W=360e-9
+m3 out a vground vground NMOS_VTH L=45e-9 W=157.5e-9
+m2 out b vground vground NMOS_VTH L=45e-9 W=157.5e-9
+.ends nor2
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: and3
+** View name: schematic
+.subckt and3 a b c out vground vsupply
+xi0 a b net13 vground vsupply nand2
+xi2 c net12 vground vsupply inv1
+xi3 net13 net12 out vground vsupply nor2
+.ends and3
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: and4
+** View name: schematic
+.subckt and4 a b c d out vground vsupply
+xi3 c d net14 vground vsupply nand2
+xi0 a b net13 vground vsupply nand2
+xi4 net13 net14 out vground vsupply nor2
+.ends and4
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: and5
+** View name: schematic
+.subckt and5 a b c d e out vground vsupply
+xi3 c d net14 vground vsupply nand2
+xi5 net010 e net011 vground vsupply nand2
+xi0 a b net13 vground vsupply nand2
+xi6 net011 out vground vsupply inv1
+xi4 net13 net14 net010 vground vsupply nor2
+.ends and5
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: or5
+** View name: schematic
+.subckt or5 a b c d e out vground vsupply
+xi4 net09 e net010 vground vsupply nor2
+xi3 c d net05 vground vsupply nor2
+xi0 a b net9 vground vsupply nor2
+xi1 net010 out vground vsupply inv1
+xi2 net9 net05 net09 vground vsupply nand2
+.ends or5
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: or4
+** View name: schematic
+.subckt or4 a b c d out vground vsupply
+xi3 c d net05 vground vsupply nor2
+xi0 a b net9 vground vsupply nor2
+xi2 net9 net05 out vground vsupply nand2
+.ends or4
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: or3
+** View name: schematic
+.subckt or3 a b c out vground vsupply
+xi0 a b net9 vground vsupply nor2
+xi1 c net05 vground vsupply inv1
+xi2 net9 net05 out vground vsupply nand2
+.ends or3
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: or2
+** View name: schematic
+.subckt or2 a b out vground vsupply
+xi0 a b net9 vground vsupply nor2
+xi1 net9 out vground vsupply inv1
+.ends or2
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: CLA_4bits
+** View name: schematic
+.subckt CLA_4bits a0 a1 a2 a3 b0 b1 b2 b3 c0 cout s0 s1 s2 s3 vground vsupply
+xi10 a1 b1 p1 vground vsupply xor2
+xi8 a0 b0 p0 vground vsupply xor2
+xi7 c0 p0 s0 vground vsupply xor2
+xi6 c1 p1 s1 vground vsupply xor2
+xi4 a2 b2 p2 vground vsupply xor2
+xi2 c2 p2 s2 vground vsupply xor2
+xi3 c3 p3 s3 vground vsupply xor2
+xi0 a3 b3 p3 vground vsupply xor2
+xi20 g2 p3 net3 vground vsupply and2
+xi32 a1 b1 g1 vground vsupply and2
+xi17 c0 p0 net18 vground vsupply and2
+xi18 g0 p1 net13 vground vsupply and2
+xi19 g1 p2 net8 vground vsupply and2
+xi31 a0 b0 g0 vground vsupply and2
+xi34 a2 b2 g2 vground vsupply and2
+xi33 a3 b3 g3 vground vsupply and2
+xi23 c0 p0 p1 net22 vground vsupply and3
+xi22 g0 p1 p2 net28 vground vsupply and3
+xi21 g1 p2 p3 net65 vground vsupply and3
+xi25 g0 p1 p2 p3 net66 vground vsupply and4
+xi24 c0 p0 p1 p2 net47 vground vsupply and4
+xi26 c0 p0 p1 p2 p3 net54 vground vsupply and5
+xi27 g3 net3 net65 net66 net54 cout vground vsupply or5
+xi28 g2 net8 net28 net47 c3 vground vsupply or4
+xi29 g1 net13 net22 c2 vground vsupply or3
+xi30 net18 g0 c1 vground vsupply or2
+.ends CLA_4bits
+** End of subcircuit definition.
+
+** Library name: ECE8893_lib
+** Cell name: CLA_8bits
+** View name: schematic
+xi1 a4 a5 a6 a7 b4 b5 b6 b7 cin cout s4 s5 s6 s7 vground vsupply CLA_4bits
+xi0 a0 a1 a2 a3 b0 b1 b2 b3 c0 cin s0 s1 s2 s3 vground vsupply CLA_4bits
+.include "period_sweep.sp"
+.END

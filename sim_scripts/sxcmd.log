@@ -1,0 +1,8 @@
+### SPICE Explorer log file, revision C2009.03 (build 0903) ###
+### created at 22:25:34 on Wed Apr 15 2015 (Linux AMD64) ###
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+# (0) HOME defined
+sx_open_sim_file_read "/nethome/jshinsato3/ECE6130_Cadence/Cadence/ECE8893_lib/sim_scripts/input.tr0"
