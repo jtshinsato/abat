@@ -14,15 +14,15 @@ int main (int argc, char *argv[])
   
   
   while (getline(&line1, &len, old) != -1) {
-    printf("line: %s",line1);
-    if(getline(&line1, &len, old) != -1)
-      fprintf(new,"%s%s\n", line1,line2);
+    line1=strtok(line1, "\n");
+    printf("%s",line1);
+    if(getline(&line2, &len, old) != -1)
+      fprintf(new,"%s%s",line1,line2);
   }
   
   fclose(new);
   fclose(old);
-  if (line1) free(line1);
-  if (line2) free(line2);
+
   return 0;
   
 }
