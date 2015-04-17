@@ -3,7 +3,7 @@
 ** Design library name: ECE8893_lib
 ** Design cell name: inv_chain
 ** Design view name: schematic
-.PARAM f=10e3 endtime=10*1/f
+.PARAM f=10e3 endtime=10*1/f period=1/f pulse=1/f*1/2
 
 
 .TRAN 10e-12 endtime START=0.0 SWEEP DATA=D
@@ -59,7 +59,7 @@ m0 net4 in vss 0 NMOS_VTH L=45e-9 W=90e-9
 
 vvss vss 0 DC=0
 vvcc vcc 0 DC=1.2
-vin in 0 pulse 1 0 0 0 0 .5m 1m
+vin in 0 pulse 1.2 0 0 0 0 pulse period
 
 .meas tran Iavg AVG I(vvcc) FROM=0 TO=endtime
 .meas tran Vavg AVG V(vcc) FROM=0 TO=endtime
