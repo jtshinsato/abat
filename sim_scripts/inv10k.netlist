@@ -1,0 +1,68 @@
+** Generated for: hspiceD
+** Generated on: Apr 17 15:11:14 2015
+** Design library name: ECE8893_lib
+** Design cell name: inv_chain
+** Design view name: schematic
+.PARAM f=10e3 endtime=10*1/f
+
+
+.TRAN 10e-12 endtime START=0.0 SWEEP DATA=D
+
+.DATA D
+f
+1e3
+10e3
+100e3
+1000e3
+.ENDDATA
+
+.OP
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTL.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTL.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_THKOX.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_THKOX.inc"
+
+** Library name: ECE8893_lib
+** Cell name: inv_chain
+** View name: schematic
+m19 out net032 vcc vcc PMOS_VTH L=45e-9 W=2.36196e-3
+m17 net032 net029 vcc vcc PMOS_VTH L=45e-9 W=787.32e-6
+m14 net029 net025 vcc vcc PMOS_VTH L=45e-9 W=262.44e-6
+m13 net025 net021 vcc vcc PMOS_VTH L=45e-9 W=87.48e-6
+m11 net021 net018 vcc vcc PMOS_VTH L=45e-9 W=29.16e-6
+m9 net018 net15 vcc vcc PMOS_VTH L=45e-9 W=9.72e-6
+m6 net15 net12 vcc vcc PMOS_VTH L=45e-9 W=3.24e-6
+m5 net12 net8 vcc vcc PMOS_VTH L=45e-9 W=1.08e-6
+m3 net8 net4 vcc vcc PMOS_VTH L=45e-9 W=360e-9
+m1 net4 in vcc vcc PMOS_VTH L=45e-9 W=360e-9
+m18 out net032 vss 0 NMOS_VTH L=45e-9 W=1.77147e-3
+m16 net032 net029 vss 0 NMOS_VTH L=45e-9 W=590.49e-6
+m15 net029 net025 vss 0 NMOS_VTH L=45e-9 W=196.83e-6
+m12 net025 net021 vss 0 NMOS_VTH L=45e-9 W=65.61e-6
+m10 net021 net018 vss 0 NMOS_VTH L=45e-9 W=21.87e-6
+m8 net018 net15 vss 0 NMOS_VTH L=45e-9 W=7.29e-6
+m7 net15 net12 vss 0 NMOS_VTH L=45e-9 W=2.43e-6
+m4 net12 net8 vss 0 NMOS_VTH L=45e-9 W=810e-9
+m2 net8 net4 vss 0 NMOS_VTH L=45e-9 W=270e-9
+m0 net4 in vss 0 NMOS_VTH L=45e-9 W=90e-9
+
+vvss vss 0 DC=0
+vvcc vcc 0 DC=1.2
+vin in 0 pulse 1 0 0 0 0 .5m 1m
+
+.meas tran Iavg AVG I(vvcc) FROM=0 TO=endtime
+.meas tran Vavg AVG V(vcc) FROM=0 TO=endtime
+.meas tran Etot Param='Iavg*Vavg*endtime*-1'
+
+.END
