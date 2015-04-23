@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"design" "(\"ECE8893_lib\" \"abat_invchain_latched\" \"schematic\" \"\")"
+"simulator" "hspiceD"
+"temperature" "25.0"
+"host" ""
+"date" "Apr 22 23:00:25 2015"
+"title" ""
+"analysisList" "()"
+END

@@ -1,0 +1,13 @@
+CADENCE IHNL01070
+$model
+ECE8893_lib/inv1/schematic inv1
+ECE8893_lib/nand2/schematic nand2
+ECE8893_lib/abat_latch/schematic abat_latch
+ECE8893_lib/abat_invchain_latched/schematic abat_invchain_latched
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+C c
+$endparam

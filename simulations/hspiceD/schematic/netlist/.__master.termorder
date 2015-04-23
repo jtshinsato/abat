@@ -1,0 +1,3 @@
+"ECE8893_lib.nand2.schematic.termorder" (("A" "B" "Out" "Vground" "Vsupply") ("A" "B" "Out" "Vground" "Vsupply"))
+"ECE8893_lib.abat_latch.schematic.termorder" (("CLK" "D" "Q" "Q'" "Vsupply" "Vground") ("CLK" "D" "Q" "Q'" "Vsupply" "Vground"))
+"ECE8893_lib.inv1.schematic.termorder" nil

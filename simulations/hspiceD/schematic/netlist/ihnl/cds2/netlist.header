@@ -1,0 +1,5 @@
+
+** Library name: ECE8893_lib
+** Cell name: abat_latch
+** View name: schematic
+.subckt abat_latch clk d q q__ vsupply vground

@@ -1,0 +1,33 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "abat_invchain_latched"
+  repList "hspiceD spice cmos_sch cmos.sch schematic"
+  stopList "hspiceD spice"
+  globalList "gnd!"
+  hierDelim "^"
+  netlistDir "/nethome/jshinsato3/simulation/abat_invchain_latched/hspiceD/schematic/netlist"
+ )
+( instViewTable
+ )
+( net
+( "gnd!" "0" )
+ )
+( inst
+ )
+( model
+( "ECE8893_lib/inv1/schematic" "inv1" )
+( "ECE8893_lib/abat_latch/schematic" "abat_latch" )
+( "ECE8893_lib/abat_invchain_latched/schematic" "abat_invchain_latched" )
+( "ECE8893_lib/nand2/schematic" "nand2" )
+ )
+( term
+ )
+( param
+( "C" "c" )
+ )
+( "inv1" "ihnl/cds1/map" )
+( "abat_invchain_latched" "ihnl/cds3/map" )
+( "abat_latch" "ihnl/cds2/map" )
+( "nand2" "ihnl/cds0/map" )
+ )

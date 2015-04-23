@@ -1,0 +1,6 @@
+CADENCE IHNL01074
+
+ECE8893_lib nand2 schematic cds0
+ECE8893_lib inv1 schematic cds1
+ECE8893_lib abat_latch schematic cds2
+ECE8893_lib abat_invchain_latched schematic cds3

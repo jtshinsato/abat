@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"M1v" "m1v"
+"M3v" "m3v"
+"M1n" "NCSU_Devices_FreePDK45_PMOS_VTH_hspiceD"
+"M3n" "NCSU_Devices_FreePDK45_NMOS_VTH_hspiceD"
+"Av" "(FUNCTION (plus (root \"M1/G\") (root \"M3/G\")))v"
+"Vsupplyv" "(FUNCTION (plus (root \"M1/B\") (root \"M1/S\")))v"
+"Vgroundv" "(FUNCTION (plus (root \"M3/S\") (root \"M3/B\")))v"
+"Outv" "(FUNCTION (plus (root \"M1/D\") (root \"M3/D\")))v"

@@ -1,0 +1,35 @@
+
+** Library name: ECE8893_lib
+** Cell name: abat_invchain_latched
+** View name: schematic
+r1 vcc net130 1e-9
+r0 v1 net131 1e-9
+xi1 vcc chain_out q q__ vccdc vss abat_latch
+c1 net130 vss 'c*1e-3'
+c0 net131 vss 'c*1e-3'
+l1 vref vcc 1e-6
+l0 v1 vref 1e-6
+m22 vcc v1 vss vss NMOS_VTG L=45e-9 W=90e-9
+m20 vss vcc v1 vss NMOS_VTG L=45e-9 W=180e-9
+m23 vcc v1 vccdc vccdc PMOS_VTG L=45e-9 W=90e-9
+m21 vccdc vcc v1 vccdc PMOS_VTG L=45e-9 W=180e-9
+m18 chain_out net121 vss 0 NMOS_VTH L=45e-9 W=1.77147e-3
+m16 net121 net118 vss 0 NMOS_VTH L=45e-9 W=590.49e-6
+m15 net118 net114 vss 0 NMOS_VTH L=45e-9 W=196.83e-6
+m12 net114 net110 vss 0 NMOS_VTH L=45e-9 W=65.61e-6
+m10 net110 net107 vss 0 NMOS_VTH L=45e-9 W=21.87e-6
+m8 net107 net104 vss 0 NMOS_VTH L=45e-9 W=7.29e-6
+m7 net104 net101 vss 0 NMOS_VTH L=45e-9 W=2.43e-6
+m4 net101 net96 vss 0 NMOS_VTH L=45e-9 W=810e-9
+m2 net96 net89 vss 0 NMOS_VTH L=45e-9 W=270e-9
+m0 net89 in vss 0 NMOS_VTH L=45e-9 W=90e-9
+m19 chain_out net121 vcc vcc PMOS_VTH L=45e-9 W=2.36196e-3
+m17 net121 net118 vcc vcc PMOS_VTH L=45e-9 W=787.32e-6
+m14 net118 net114 vcc vcc PMOS_VTH L=45e-9 W=262.44e-6
+m13 net114 net110 vcc vcc PMOS_VTH L=45e-9 W=87.48e-6
+m11 net110 net107 vcc vcc PMOS_VTH L=45e-9 W=29.16e-6
+m9 net107 net104 vcc vcc PMOS_VTH L=45e-9 W=9.72e-6
+m6 net104 net101 vcc vcc PMOS_VTH L=45e-9 W=3.24e-6
+m5 net101 net96 vcc vcc PMOS_VTH L=45e-9 W=1.08e-6
+m3 net96 net89 vcc vcc PMOS_VTH L=45e-9 W=360e-9
+m1 net89 in vcc vcc PMOS_VTH L=45e-9 W=360e-9

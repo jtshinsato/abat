@@ -1,0 +1,6 @@
+m1 out a vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m0 out b vsupply vsupply PMOS_VTH L=45e-9 W=360e-9
+m3 net22 b vground vground NMOS_VTH L=45e-9 W=157.5e-9
+m2 out a net22 vground NMOS_VTH L=45e-9 W=157.5e-9
+.ends nand2
+** End of subcircuit definition.

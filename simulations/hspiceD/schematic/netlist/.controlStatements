@@ -1,0 +1,14 @@
+
+
+.TRAN 10e-9 5e-6 START=0.0
+.OPTION DELMAX=10e-9
+
+
+.OP
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2

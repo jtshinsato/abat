@@ -1,0 +1,63 @@
+***** HSPICE -- G-2012.06 32-BIT (May 27 2012) RHEL32 ******
+ Input File: input.ckt
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   jshinsato3           HOSTNAME: ecelinsrva.ece.gatech.edu
+ lic: HOSTID:                      PID:      34043
+ lic: Using FLEXlm license file:
+ lic: 1900@ecelinsrv3.ece.gatech.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 12-jan-2016/2014.09
+ lic: 8(in_use)/50(total) FLOATING license(s) on SERVER ecelinsrv3.ece.gatech.ed
+ lic:
+ init: begin read circuit files,  cpu clock=  4.00E-02
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/ad
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/ad
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/beha
+                         ve
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/bjt
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/burr
+                         _brn
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/coml
+                         inear
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/dio
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/fet
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/lin_
+                         tech
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/pci
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/sign
+                         et
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/ti
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/tlin
+                         e
+       option search   = /tools/synopsys/hspice/g201206/hspice/parts/xili
+                         nx
+       option runlvl
+       option delmax   =    1.000E-08
+       option artist   =     2.00
+       option ingold   =     2.00
+       option parhie   = local
+       option psf      =     2.00
+ init: end read circuit files,  cpu clock=  5.00E-02 memory=    150 kb
+ init: begin check errors,  cpu clock=  5.00E-02
+ init: end check errors,  cpu clock=  6.00E-02 memory=    286 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  6.00E-02
+       establish matrix -- done,  cpu clock=  6.00E-02 memory=    368 kb
+       re-order matrix -- done,  cpu clock=  6.00E-02 memory=    378 kb
+ init: end setup matrix,  cpu clock=  6.00E-02 memory=    440 kb
+ dcop: begin dcop,  cpu clock=  6.00E-02
+ dcop: end dcop,  cpu clock=  6.00E-02 memory=    440 kb  tot_iter=      11
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps= 501 cpu clock=  6.00E-02
+ tran: time= 5.0125E-07 tot_iter=     950 conv_iter=     418 cpu clock= 1.70E-01
+ tran: time= 1.0025E-06 tot_iter=    1711 conv_iter=     797 cpu clock= 2.50E-01
+ tran: time= 1.5037E-06 tot_iter=    2501 conv_iter=    1188 cpu clock= 3.30E-01
+ tran: time= 2.0000E-06 tot_iter=    3249 conv_iter=    1562 cpu clock= 4.10E-01
+ tran: time= 2.5023E-06 tot_iter=    4031 conv_iter=    1946 cpu clock= 5.00E-01
+ tran: time= 3.0035E-06 tot_iter=    4781 conv_iter=    2321 cpu clock= 5.80E-01
+ tran: time= 3.5007E-06 tot_iter=    5736 conv_iter=    2748 cpu clock= 6.70E-01
+ tran: time= 4.0000E-06 tot_iter=    6492 conv_iter=    3121 cpu clock= 7.60E-01
+ tran: time= 4.5012E-06 tot_iter=    7255 conv_iter=    3496 cpu clock= 8.50E-01
+ tran: time= 5.0000E-06 tot_iter=    8005 conv_iter=    3871 cpu clock= 9.30E-01
+ sweep: tran tran0    end,  cpu clock=  9.30E-01 memory=    449 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

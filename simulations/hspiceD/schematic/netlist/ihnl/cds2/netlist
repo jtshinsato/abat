@@ -1,0 +1,7 @@
+xi3 net12 q__ q vground vsupply nand2
+xi2 q net15 q__ vground vsupply nand2
+xi1 clk net17 net15 vground vsupply nand2
+xi0 d clk net12 vground vsupply nand2
+xi5 d net17 vground vsupply inv1
+.ends abat_latch
+** End of subcircuit definition.

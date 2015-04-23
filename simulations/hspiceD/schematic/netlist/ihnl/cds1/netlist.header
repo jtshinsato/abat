@@ -1,0 +1,5 @@
+
+** Library name: ECE8893_lib
+** Cell name: inv1
+** View name: schematic
+.subckt inv1 a out vground vsupply

@@ -1,0 +1,5 @@
+
+** Library name: ECE8893_lib
+** Cell name: nand2
+** View name: schematic
+.subckt nand2 a b out vground vsupply

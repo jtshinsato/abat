@@ -1,0 +1,8 @@
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTL.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_THKOX.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTL.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTH.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTG.inc"
+.INCLUDE "/nethome/jshinsato3/ECE6130_Cadence/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_THKOX.inc"

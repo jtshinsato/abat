@@ -1,0 +1,4 @@
+vvss vss 0 DC=0
+vin in 0 pulse 1.2 0 0 0 0 1u 2u
+vvccdc vccdc 0 DC=1.2
+vvref vref 0 pulse 1.2 0 0 0 0 50p 100p

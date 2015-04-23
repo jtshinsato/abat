@@ -1,0 +1,40 @@
+* "simulator" "HSPICE" 
+* "version" "G-2012.06 32-BIT"
+* "format" "HSP"
+* "rundate" "23:00:26 04/22/2015 "
+* "netlist" "input.ckt "
+* "runtitle" "** generated for: hspiced"
+* time =  5.000e-06       
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ chain_out = 1.392e-01       
++ in = 0.000e+00       
++ net101 =-1.335e-01       
++ net104 = 1.155e-01       
++ net107 =-5.414e-02       
++ net110 = 1.644e-01       
++ net114 =-2.768e-02       
++ net118 = 1.783e-01       
++ net121 =-2.320e-02       
++ net130 = 7.820e-02       
++ net131 = 7.194e-02       
++ net89 = 1.847e-01       
++ net96 =-4.879e-03       
++ q = 1.200e+00       
++ q__ = 1.055e-06       
++ v1 = 7.194e-02       
++ vcc = 7.820e-02       
++ vccdc = 1.200e+00       
++ vref = 2.940e-01       
++ vss = 0.000e+00       
++ xi1^net12 = 1.200e+00       
++ xi1^net15 = 1.200e+00       
++ xi1^net17 = 1.200e+00       
++ xi1^xi3^net22 = 7.444e-01       
++ xi1^xi2^net22 = 5.437e-07       
++ xi1^xi1^net22 = 9.562e-07       
++ xi1^xi0^net22 = 1.325e-01       
+***   END: Saved Operating Point ***                     
